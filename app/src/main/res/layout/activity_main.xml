@@ -43,20 +43,20 @@
                     android:layout_weight="1"
                     android:width="30dp"
                     android:background="#333333"
+                    android:onClick="changePowerButton"
                     android:text="ToggleButton"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/StationDisplay"
-                android:layout_width="wrap_content"
+                android:layout_width="800dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#AAAAAA"
+                android:background="#000000"
                 android:gravity="bottom|center_horizontal"
-                android:text="106.8 Carry On Wayward Son - Kansas"
+                android:text="88.1 FM"
                 android:textAlignment="gravity"
-                android:textColor="#FFA500"
+                android:textColor="#000000"
                 android:textSize="50dp"
                 android:textStyle="bold|italic" />
 
@@ -66,6 +66,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="32"
                 android:height="10dp"
+                android:enabled="true"
+                android:onClick="AM_FM_Pressed"
                 android:scaleX="2"
                 android:scaleY="2"
                 android:showText="true"
@@ -73,7 +75,7 @@
                 android:textOff="FM"
                 android:textOn="AM"
                 android:textSize="10dp"
-                android:thumbTint="#FFA500"
+                android:thumbTint="#FFA000"
                 android:translationX="-30dp" />
         </LinearLayout>
 
@@ -99,7 +101,7 @@
                     android:textColor="#FFFFFF" />
 
                 <SeekBar
-                    android:id="@+id/seekBar"
+                    android:id="@+id/Volume"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2" />
@@ -114,10 +116,11 @@
                     android:textColor="#FFFFFF" />
 
                 <SeekBar
-                    android:id="@+id/seekBar2"
+                    android:id="@+id/Tuner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2" />
+                    android:layout_weight="2"
+                    android:max="100" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,27 +139,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="Preset1"
                         android:text="Preset 1" />
-
-                    <Button
-                        android:id="@+id/Preset3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Preset 3" />
 
                     <Button
                         android:id="@+id/Preset2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="Preset2"
                         android:text="Preset 2" />
+
+                    <Button
+                        android:id="@+id/Preset3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="Preset3"
+                        android:text="Preset 3" />
 
                     <Button
                         android:id="@+id/Preset4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="Preset4"
                         android:text="Preset 4" />
 
                     <Button
@@ -164,6 +175,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:enabled="false"
+                        android:onClick="Preset5"
                         android:text="Preset 5" />
                 </LinearLayout>
 
@@ -200,7 +213,7 @@
                     android:background="#333333"
                     android:text="Insert CD Here"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#333333"
                     android:textSize="40sp" />
 
                 <Space
@@ -227,6 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="Pause" />
 
             <Button
@@ -234,6 +248,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="Stop" />
 
             <Button
@@ -241,6 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="Eject" />
 
             <Button
@@ -248,6 +264,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="Forward" />
 
             <Button
@@ -255,6 +272,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="Back" />
         </LinearLayout>
     </LinearLayout>
